@@ -160,9 +160,12 @@ def problem1b(point, win, width, height, color):
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
-    ellipsis = rg.Ellipse(rg.Point(, point.y + height), point)
+    point1 =rg.Point(point.x + width/2, point.y)
+    point2 = rg.Point(point.x - width/2, point.y + height)
+    ellipsis = rg.Ellipse(point1, point2)
     ellipsis.fill_color = color
     ellipsis.attach_to(win)
+    point.attach_to(win)
     win.render()
 
 

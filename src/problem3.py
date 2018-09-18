@@ -102,7 +102,37 @@ def problem3(point, length, delta, window):
     # TODO (continued):         and colors per the specified pattern.
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+    vert_line = rg.Line(point, rg.Point(point.x, point.y + length))
+    vert_line.thickness = 3
+    mag_line = rg.Line(point, rg.Point(point.x + length, point.y))
+    mag_line.color = 'magenta'
+    mag_line.thickness = 3
+    point = rg.Point(point.x, point.y + delta)
+    mag2_line = rg.Line(rg.Point(point.x, point.y + 3*delta), rg.Point(point.x + length + 60, point.y +3*delta))
+    mag3_line = rg.Line(rg.Point(point.x, point.y + 6 * delta), rg.Point(point.x + length + 120, point.y + 6 * delta))
+    mag2_line.color = 'magenta'
+    mag2_line.thickness = 3
+    mag3_line.color = 'magenta'
+    mag3_line.thickness = 3
 
+    cyan_line = rg.Line(rg.Point(point.x, point.y + delta), rg.Point(point.x + length + 20, point.y +delta))
+    cyan2_line = rg.Line(rg.Point(point.x, point.y + 4*delta), rg.Point(point.x + length + 80, point.y + 4*delta))
+    cyan3_line = rg.Line(rg.Point(point.x, point.y + 7*delta), rg.Point(point.x + length + 140, point.y + 7*delta))
+    cyan_line.color = 'cyan'
+    cyan_line.thickness = 3
+    cyan2_line.color = 'cyan'
+    cyan2_line.thickness = 3
+    cyan3_line.color = 'cyan'
+    cyan3_line.thickness = 3
+
+    vert_line.attach_to(window)
+    mag_line.attach_to(window)
+    mag2_line.attach_to(window)
+    mag3_line.attach_to(window)
+    cyan_line.attach_to(window)
+    cyan2_line.attach_to(window)
+    cyan3_line.attach_to(window)
+    window.render()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
