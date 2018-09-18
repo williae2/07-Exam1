@@ -473,7 +473,8 @@ def problem1c(m):
     # TODO (continued)    You get   NO credit   if your solution is more
     # TODO (continued)    than 3 lines of code (and it can be done in 1 line).
     ############################################################################
-
+    for k in range(m):
+        
 
 ################################################################################
 # Our tests use the following to print error messages in red.
