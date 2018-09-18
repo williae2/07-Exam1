@@ -44,6 +44,33 @@ def problem2a_testing():
     print('---------------------------------------------------------')
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
+    # Test 1
+    expected = 11
+    actual = sum_of_digits_of_sum_of_factors(28)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ',actual)
+
+    # Test 1
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(5)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 1
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(14)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 1
+    expected = 21
+    actual = sum_of_digits_of_sum_of_factors(25)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
 
 
 def sum_of_digits_of_sum_of_factors(n):
@@ -318,7 +345,11 @@ def problem2b(a, b, x):
     # TODO (continued):       (i.e., call) the   number_of_factors   function
     #                         that is DEFINED ABOVE.
     ############################################################################
-
+    total = 0
+    for k in range(b - a + 1):
+        if number_of_factors(k + a) >= x:
+            total = total + (k + a)
+    return total
 
 def run_test_problem2c():
     """ Tests the   problem2c   function. """
